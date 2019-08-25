@@ -52,23 +52,23 @@ PID        USER                 NAME                                      COMM
 3. [myfork.py] - В этом скрипте добалены обработчики некоторых сигналов. SIGHUP, SIGINT, SIGTERM. Например чтобы прервать работу скрипта можно нажать Ctrl+C и скрипту будет отправлен сигнал SIGINT (номер 2). Обработчики сигналов позволяют прервать работу скрипта после отправки им определенных сигналов и вывести пользователю какую либо информацию. Конечно без этих обработчиков также можно будет выйти из скрипта, однако будет выведена ошибка, а с обработчиками ошибки не будет. В скрипте в комментариях указаны какие команды были добавлены и что они делают.
 4. [nice.sh] - Скрипт, который запускает параллельно два процесса с разными приоритетами. Приоритет выставляется на процессорное время. В скрипте мы можем увидеть разницу.
 5. [ps.sh] - Скрипт, простой аналог ps au. Данные извлекаются из псевдофайловой системы proc.
-    Формат вывода:
-    PID                           USER                          COMM                                                                                 STAT      RSS
-    1                             root                          /usr/lib/systemd/systemd--switched-root--system--deserialize22                       S         3256
-    2                             root                          [kthreadd]                                                                           S
-    3                             root                          [ksoftirqd/0]                                                                        S
-    5                             root                          [kworker/0:0H]                                                                       S
-    7                             root                          [migration/0]                                                                        S
-    8                             root                          [rcu_bh]                                                                             S
-    9                             root                          [rcu_sched]                                                                          S
-    10                            root                          [lru-add-drain]                                                                      S
-    11                            root                          [watchdog/0]                                                                         S
-    13                            root                          [kdevtmpfs]                                                                          S
-    14                            root                          [netns]                                                                              S
-    15                            root                          [khungtaskd]                                                                         S
-    16                            root                          [writeback]                                                                          S
-    17                            root                          [kintegrityd]                                                                        S
-
+```Формат вывода:
+PID                           USER                          COMM                                                                                 STAT      RSS
+1                             root                          /usr/lib/systemd/systemd--switched-root--system--deserialize22                       S         3256
+2                             root                          [kthreadd]                                                                           S
+3                             root                          [ksoftirqd/0]                                                                        S
+5                             root                          [kworker/0:0H]                                                                       S
+7                             root                          [migration/0]                                                                        S
+8                             root                          [rcu_bh]                                                                             S
+9                             root                          [rcu_sched]                                                                          S
+10                            root                          [lru-add-drain]                                                                      S
+11                            root                          [watchdog/0]                                                                         S
+13                            root                          [kdevtmpfs]                                                                          S
+14                            root                          [netns]                                                                              S
+15                            root                          [khungtaskd]                                                                         S
+16                            root                          [writeback]                                                                          S
+17                            root                          [kintegrityd]                                                                        S
+```
 
 [ionice.sh]:https://github.com/staybox/otus_dz5/blob/master/ionice.sh
 [lsof.sh]:https://github.com/staybox/otus_dz5/blob/master/lsof.sh
